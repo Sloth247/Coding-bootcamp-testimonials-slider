@@ -52,6 +52,18 @@ button {
   outline-offset: 0.3rem;
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
 .btn {
   padding: 0.8rem 1.3rem;
   background-color: #fff;
@@ -80,7 +92,8 @@ button {
 
 .main {
   padding: 7% 7% 15% 7%;
-  background-image: url("../../images/pattern-bg.svg"), url("../../images/pattern-curve.svg");
+  background-image: url("../../images/pattern-bg.svg"),
+    url("../../images/pattern-curve.svg");
   background-position: top center, bottom left;
   background-repeat: no-repeat;
   background-size: contain, 80%;
