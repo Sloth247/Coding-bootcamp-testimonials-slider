@@ -1,0 +1,51 @@
+@use "../abstracts/variables";
+@use "../abstracts/mixins";
+
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+  }
+  *,
+  *::before,
+  *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+  }
+  
+  body {
+    font-family: variables.$font-primary;
+    color: variables.$color-dark-blue;
+    font-weight: 500;
+    font-size: 1.1rem;
+    max-width: 100%;
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+
+    @include mixins.mq(medium) {
+      font-size: 1.6rem;
+    }
+
+    @include mixins.mq(large) {
+      font-size: 2rem;
+    }
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  li {
+    list-style: none;
+  }
+  
+  button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  *:focus {
+    outline: 3px dotted hsl(0, 93%, 68%);
+    outline-offset: 0.3rem;
+  }

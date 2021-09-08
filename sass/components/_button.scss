@@ -1,0 +1,30 @@
+@use "../abstracts/mixins";
+
+
+.btn {
+    padding: 0.8rem 1.3rem;
+    background-color: #fff;
+    box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+    
+       
+    &-prev {
+        border-top-left-radius: 3.5rem ;
+        border-bottom-left-radius: 3.5rem;
+    }
+    &-next {
+        border-top-right-radius: 3.5rem;
+        border-bottom-right-radius: 3.5rem;
+    }
+    &-container{
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        transform: translateY(-50%);
+
+        @include mixins.mq(large) {
+            justify-content: flex-start;
+            transform: translate(15%, -50%);
+        }
+    }
+
+}

@@ -1,0 +1,94 @@
+@use "../abstracts/variables";
+@use "../abstracts/mixins";
+
+.main {
+    padding: 7% 7% 15% 7%;
+    background-image: url("../../images/pattern-bg.svg"), url("../../images/pattern-curve.svg");
+    background-position: top center, bottom left;
+    background-repeat: no-repeat;
+    background-size: contain, 80%;
+
+    @include mixins.mq(large) {
+        padding: 7% ;
+        background-position: center right, bottom left;
+        background-size: 55%, 55%;
+    }
+    
+}
+
+.slider {
+    @include mixins.mq(large) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+    &__inner-container {
+        padding: 5%; 
+        grid-column: 2/3;
+        grid-row: 1/2;
+        @include mixins.mq(large) {
+            padding: 0;
+            transform: translateY(5%);
+        }
+        
+    }
+    
+    &__hero-img {
+        width: 100%;
+        box-shadow: 10px 10px 20px rgba(0,0,0,0.15);
+    }   
+    
+    
+    &.slide-hide {
+        display: none;
+    }
+}
+
+.testimonial {
+    text-align: center;
+    padding: 7% 0%;
+    background-image: url("../../images/pattern-quotes.svg");
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: 20%;
+
+    @include mixins.mq(large) {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        display: grid;
+        place-content: center;
+        background: none;
+        text-align: left;
+        padding-left: 10%;
+
+    }
+
+    &__description {
+        padding-bottom: 5%;
+        @include mixins.mq(large) {
+        padding: 10% 0%;
+        width: 120%;
+        background-image: url("../../images/pattern-quotes.svg");
+        background-repeat: no-repeat;
+        background-position: top 0 left 20%;
+        background-size: 20%;
+        z-index: 20;
+    }
+    }
+    &__person {
+        display: flex;
+        flex-direction: column;
+        @include mixins.mq(large) {
+            display: inline-block;
+            font-size: 1.5rem;
+        }
+    }
+    &__name {
+        font-weight: 700;
+        color: variables.$color-dark-blue;
+    }
+    &__title {
+        color: variables.$color-grayish-blue;
+        margin-left: 0.5rem;
+    }
+}
