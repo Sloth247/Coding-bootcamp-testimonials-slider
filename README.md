@@ -28,15 +28,19 @@ Users should be able to:
 ### Screenshot
 
 - Mobile View at 375px : Tanya
+
   ![](/images/Screenshot-Mobile-Tanya.png)
 
 - Mobile View at 375px : John
+
   ![](/images/Screenshot-Mobile-John.png)
 
 - Desktop View at 1440px : Tanya
+
   ![](/images/Screenshot-Desktop-Tanya.png)
 
 - Desktop View at 375px : John
+
   ![](/images/Screenshot-Desktop-John.png)
 
 ### Links
