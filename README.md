@@ -50,9 +50,9 @@ Users should be able to:
 
 ## My process
 
-I put all contents in <main>, and centered within <body> by CSS-grid.
+I put all contents in `<main>`, and centered within `<body>` by CSS-grid.
 For background images, I attached them on the containers of relevant images/texts and posisitoned them.
-By using <button> for arrows to control sliders, they are keybord focusable and controllable.
+By using `<button>` for arrows to control sliders, they are keybord focusable and controllable.
 All contents are toggled by pressing prev/next arrow buttons.
 
 ### Built with
